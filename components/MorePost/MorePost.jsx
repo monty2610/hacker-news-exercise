@@ -10,11 +10,17 @@ const MorePost = () => {
   };
 
   return (
-    <li>
-      <button type="button" onClick={handleMoreClick}>
-        More
-      </button>
-    </li>
+    <button type="button" onClick={handleMoreClick}>
+      More
+      <style jsx>
+        {`
+          button {
+            color: #fc6500;
+            margin-left: 150px;
+          }
+        `}
+      </style>
+    </button>
   );
 };
 

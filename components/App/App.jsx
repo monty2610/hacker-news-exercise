@@ -12,7 +12,7 @@ export const App = ({ posts }) => (
 );
 
 App.propTypes = {
-  posts: PropTypes.shape([]).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default App;

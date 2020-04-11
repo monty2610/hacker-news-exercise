@@ -22,6 +22,45 @@ const body = css.global`
     font-family: 'Open Sans';
     font-size: 14px;
   }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .smallText {
+    font-size: 8px;
+  }
+
+  .mediumText {
+    font-size: 10px;
+  }
+
+  .largeText {
+    font-size: 12px;
+  }
+
+  .primary {
+    color: #000;
+  }
+
+  .secondary {
+    color: #828282;
+  }
+
+  .tertiary {
+    color: #b8b8b8;
+  }
+
+  .bold {
+    font-weight: 600;
+  }
 `;
 
 export default body;

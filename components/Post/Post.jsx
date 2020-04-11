@@ -10,7 +10,6 @@ const Post = ({ post }) => {
     url,
     objectID,
     points,
-    isHidden,
     num_comments,
     title,
     author,
@@ -35,28 +34,55 @@ const Post = ({ post }) => {
     hide(objectID);
   };
 
-  if (isHidden) {
-    return null;
-  }
-
   return (
-    <li key={objectID}>
-      <span>{num_comments}</span>
-      <span>{points}</span>
-      <UpvoteCTA onClick={handleUpvote} />
-      <span>{title}</span>
-      {domain && <span>{domain}</span>}
-      <span>by</span>
-      <span>{author}</span>
-      <PostedAt createdDate={created_at} />
-      <span>
-        {'[ '}
-        <button type="button" onClick={hidePost}>
-          hide
+    <>
+      <div className="column">
+        <span className="num">{num_comments}</span>
+        <span className="num">
+          {points}
+          <UpvoteCTA onClick={handleUpvote} />
+        </span>
+      </div>
+      <div className="column largeText smallPaddingLeft">{title}</div>
+      <div className="column smallText smallPaddingLeft">
+        {domain && <span className="secondary bold">{`(${domain})`}</span>}
+        <span className="secondary smallMarginLeft">by</span>
+        <span className="primary smallMarginLeft bold">{author}</span>
+      </div>
+      <div className="column smallText smallPaddingLeft">
+        <PostedAt createdDate={created_at} />
+        <button type="button" onClick={hidePost} className="hideCTA">
+          [ hide ]
         </button>
-        {' ]'}
-      </span>
-    </li>
+      </div>
+      <style jsx>
+        {`
+          .column {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          .num {
+            font-size: 10px;
+            min-width: 75px;
+            text-align: right;
+          }
+
+          .smallMarginLeft {
+            margin-left: 5px;
+          }
+
+          .smallPaddingLeft {
+            padding-left: 5px;
+          }
+
+          .hideCTA {
+            margin-left: 5px;
+          }
+        `}
+      </style>
+    </>
   );
 };
 

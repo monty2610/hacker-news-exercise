@@ -31,14 +31,7 @@ const getPostedTime = (createdDate) => {
 
 const PostedAt = ({ createdDate }) => (
   <>
-    <span>{getPostedTime(createdDate)}</span>
-    <style jsx>
-      {`
-        span {
-          margin: 0 10px;
-        }
-      `}
-    </style>
+    <span className="secondary bold">{getPostedTime(createdDate)}</span>
   </>
 );
 

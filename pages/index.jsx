@@ -11,7 +11,7 @@ const Index = ({ posts }) => (
 );
 
 Index.propTypes = {
-  posts: PropTypes.shape([]),
+  posts: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 Index.defaultProps = {

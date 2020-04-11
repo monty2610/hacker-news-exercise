@@ -7,14 +7,12 @@ const UpvoteCTA = ({ onClick }) => (
     <style jsx>
       {`
         button {
-          border: none;
-          background: transparent;
-          padding: 0;
+          padding-left: 4px;
         }
 
         img {
-          width: 20px;
-          height: 15px;
+          width: 8px;
+          fill: #999;
         }
       `}
     </style>

@@ -43,7 +43,7 @@ const AppProvider = ({ children, posts = [] }) => {
 
 AppProvider.propTypes = {
   children: PropTypes.node.isRequired,
-  posts: PropTypes.shape([]).isRequired,
+  posts: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default AppProvider;

@@ -19,7 +19,8 @@ const Heading = () => {
   };
 
   return (
-    <h2>
+    <nav>
+      <img className="icon" src="/icons/y18.gif" alt="icon" />
       <button
         type="button"
         onClick={topClickHandler}
@@ -37,10 +38,27 @@ const Heading = () => {
       </button>
       <style jsx>
         {`
+          nav {
+            background: #ff6600;
+            margin: 0;
+            padding: 5px 0;
+          }
+
+          .icon {
+            border: 1px solid #fff;
+            vertical-align: middle;
+            margin: 0 10px;
+            width: 12px;
+          }
+
           button {
-            border: none;
-            background: transparent;
             font-size: 12px;
+            vertical-align: middle;
+          }
+
+          span {
+            font-size: 12px;
+            vertical-align: middle;
           }
 
           .active {
@@ -48,7 +66,7 @@ const Heading = () => {
           }
         `}
       </style>
-    </h2>
+    </nav>
   );
 };
 
