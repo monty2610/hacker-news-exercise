@@ -1,5 +1,6 @@
 import React from 'react';
 import useApp from '../App/useApp';
+import constants from '../../constants';
 
 const MorePost = () => {
   const { fetchNextPost } = useApp();
@@ -16,7 +17,12 @@ const MorePost = () => {
         {`
           button {
             color: #fc6500;
-            margin-left: 150px;
+          }
+
+          @media only screen and (${constants.MEDIA_QUERY_LRG}) {
+            button {
+              margin-left: 150px;
+            }
           }
         `}
       </style>

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import useApp from '../App/useApp';
 import UpvoteCTA from '../UpvoteCTA/UpvoteCTA';
 import PostedAt from '../PostedAt/PostedAt';
+import constants from '../../constants';
 
 const Post = ({ post }) => {
   const { upvote, hide } = useApp();
@@ -37,14 +38,14 @@ const Post = ({ post }) => {
   return (
     <>
       <div className="column">
-        <span className="num">{num_comments}</span>
+        <span className="num left">{num_comments}</span>
         <span className="num">
           {points}
           <UpvoteCTA onClick={handleUpvote} />
         </span>
       </div>
       <div className="column largeText smallPaddingLeft">{title}</div>
-      <div className="column smallText smallPaddingLeft">
+      <div className="column smallText smallPaddingLeft author">
         {domain && <span className="secondary bold">{`(${domain})`}</span>}
         <span className="secondary smallMarginLeft">by</span>
         <span className="primary smallMarginLeft bold">{author}</span>
@@ -61,6 +62,12 @@ const Post = ({ post }) => {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin-bottom: 5px;
+            padding: 0 5px;
+          }
+
+          .author {
+            justify-content: flex-end;
           }
 
           .num {
@@ -69,16 +76,35 @@ const Post = ({ post }) => {
             text-align: right;
           }
 
+          .left {
+            text-align: left;
+          }
+
           .smallMarginLeft {
             margin-left: 5px;
           }
 
-          .smallPaddingLeft {
-            padding-left: 5px;
-          }
-
           .hideCTA {
             margin-left: 5px;
+          }
+
+          @media only screen and (${constants.MEDIA_QUERY_LRG}) {
+            .column {
+              margin-bottom: 0;
+              padding: 0;
+            }
+
+            .left {
+              text-align: right;
+            }
+
+            .smallPaddingLeft {
+              padding-left: 5px;
+            }
+
+            .author {
+              justify-content: space-between;
+            }
           }
         `}
       </style>

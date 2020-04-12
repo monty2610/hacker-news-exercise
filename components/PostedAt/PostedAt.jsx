@@ -30,9 +30,7 @@ const getPostedTime = (createdDate) => {
 };
 
 const PostedAt = ({ createdDate }) => (
-  <>
-    <span className="secondary bold">{getPostedTime(createdDate)}</span>
-  </>
+  <span className="secondary bold">{getPostedTime(createdDate)}</span>
 );
 
 PostedAt.propTypes = {

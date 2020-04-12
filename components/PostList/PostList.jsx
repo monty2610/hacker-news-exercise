@@ -2,6 +2,7 @@ import React from 'react';
 import useApp from '../App/useApp';
 import Post from '../Post/Post';
 import MorePost from '../MorePost/MorePost';
+import constants from '../../constants';
 
 const learnMoreKey = 'learnMore';
 
@@ -25,13 +26,19 @@ const PostList = () => {
         {`
           li {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             background: #f6f6ef;
             padding: 5px 0;
           }
 
           li:nth-child(odd) {
             background: #e6e6df;
+          }
+
+          @media only screen and (${constants.MEDIA_QUERY_LRG}) {
+            li {
+              flex-direction: row;
+            }
           }
         `}
       </style>
