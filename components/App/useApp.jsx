@@ -8,7 +8,7 @@ import {
   mergePostsWithUpdate,
 } from '../../utils';
 
-const useApp = () => {
+export const useApp = () => {
   const [state, dispatch] = useContext(AppContext);
 
   const fetchNextPost = async () => {

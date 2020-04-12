@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading Component Heading component should render correctly 1`] = `
+<nav
+  className="jsx-1896995305"
+>
+  <img
+    alt="icon"
+    className="jsx-1896995305 icon"
+    src="/icons/y18.gif"
+  />
+  <button
+    className="jsx-1896995305 active"
+    onClick={[Function]}
+    type="button"
+  >
+    top
+  </button>
+  <span
+    className="jsx-1896995305"
+  >
+     | 
+  </span>
+  <button
+    className="jsx-1896995305 "
+    onClick={[Function]}
+    type="button"
+  >
+    new
+  </button>
+  <JSXStyle
+    id="1896995305"
+  >
+    nav.jsx-1896995305{background:#ff6600;margin:0;padding:5px 0;}.icon.jsx-1896995305{border:1px solid #fff;vertical-align:middle;margin:0 10px;width:12px;}button.jsx-1896995305{font-size:12px;vertical-align:middle;}span.jsx-1896995305{font-size:12px;vertical-align:middle;}.active.jsx-1896995305{color:#fff;}
+  </JSXStyle>
+</nav>
+`;

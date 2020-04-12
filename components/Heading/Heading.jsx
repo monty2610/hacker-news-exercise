@@ -1,5 +1,5 @@
 import React from 'react';
-import useApp from '../App/useApp';
+import { useApp } from '../App/useApp';
 
 const Heading = () => {
   const { fetchLatest, fetchLatestPost, fetchTopPost } = useApp();
