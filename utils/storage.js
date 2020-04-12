@@ -1,7 +1,7 @@
 export const getItem = (key) => {
   if (typeof window !== 'undefined') {
     const item = window.sessionStorage.getItem(key);
-    return JSON.parse(item);
+    return item ? JSON.parse(item) : {};
   }
   return {};
 };
