@@ -2,3 +2,4 @@
 /.next/
 .vscode
 .DS_Store
+/coverage/
