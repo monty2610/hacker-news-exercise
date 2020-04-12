@@ -37,7 +37,8 @@
       "git add"
     ],
     "*.{js,jsx}": [
-      "eslint"
+      "eslint",
+      "yarn test"
     ]
   },
   "prettier": {
