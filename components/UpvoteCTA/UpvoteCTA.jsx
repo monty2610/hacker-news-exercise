@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const UpvoteCTA = ({ onClick }) => (
-  <button type="button" onClick={onClick}>
+  <button type="button" onClick={onClick} aria-label="upvote this post">
     <img src="/icons/triangle.svg" alt="upvote icon" />
     <style jsx>
       {`

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useApp from '../App/useApp';
+import { useApp } from '../App/useApp';
 import UpvoteCTA from '../UpvoteCTA/UpvoteCTA';
 import PostedAt from '../PostedAt/PostedAt';
 import constants from '../../constants';
@@ -38,8 +38,10 @@ const Post = ({ post }) => {
   return (
     <>
       <div className="column">
-        <span className="num left">{num_comments}</span>
-        <span className="num">
+        <span className="num left" aria-label={`comments ${num_comments}`}>
+          {num_comments}
+        </span>
+        <span className="num" aria-label={`points ${points}`}>
           {points}
           <UpvoteCTA onClick={handleUpvote} />
         </span>
@@ -52,7 +54,12 @@ const Post = ({ post }) => {
       </div>
       <div className="column smallText smallPaddingLeft">
         <PostedAt createdDate={created_at} />
-        <button type="button" onClick={hidePost} className="hideCTA">
+        <button
+          type="button"
+          onClick={hidePost}
+          className="hideCTA"
+          aria-label="hide this post"
+        >
           [ hide ]
         </button>
       </div>
